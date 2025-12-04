@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOFT双风格VR设计预览 - V3.0</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="vr-viewer">
+        <img id="pano-image" src="assets/pano/1F_LivingRoom_C1.jpg" alt="VR全景图" crossorigin="anonymous">
+        
+        <div id="scene-nav">
+            <h3>🏠 场景切换</h3>
+            <button onclick="changeScene('1F_LivingRoom_C1')">一层挑空客厅</button>
+            <button onclick="changeScene('1F_Study_E')">一层书房/吧台</button>
+            <button onclick="changeScene('2F_MasterRoom_A')">二层主卧/观景窗</button>
+            <button onclick="changeScene('1F_Kitchen_F')">一层中古厨房</button>
+        </div>
+    </div>
+    
+    <script src="js/vr-viewer.js"></script>
+</body>
+</html>

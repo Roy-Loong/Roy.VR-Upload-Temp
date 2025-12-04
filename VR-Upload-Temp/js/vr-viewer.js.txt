@@ -1,0 +1,25 @@
+// 模拟全景图切换功能
+function changeScene(sceneId) {
+    const imageElement = document.getElementById('pano-image');
+    // 注意：这里的路径必须与您的文件结构相匹配: assets/pano/图片名.jpg
+    const imagePath = `assets/pano/${sceneId}.jpg`; 
+
+    // 1. 实现淡出效果
+    imageElement.style.opacity = 0;
+
+    // 2. 延迟更换图片源 (模拟加载时间)
+    setTimeout(() => {
+        imageElement.src = imagePath;
+        imageElement.alt = `VR全景图 - ${sceneId}`;
+        
+        // 3. 实现淡入效果
+        imageElement.style.opacity = 1;
+
+        console.log(`场景切换成功: ${sceneId}`);
+    }, 500); // 0.5秒后更换图片
+}
+
+// 初始化时提示
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("VR Viewer 已加载。请点击场景切换按钮预览。");
+});

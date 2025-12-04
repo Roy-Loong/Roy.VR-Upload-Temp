@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 隐藏滚动条，专用于全屏VR体验 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#vr-viewer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#pano-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保图片覆盖整个容器 */
+    transition: opacity 0.5s ease-in-out; /* 切换场景时的淡入淡出效果 */
+}
+
+#scene-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+#scene-nav h3 {
+    width: 100%;
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+#scene-nav button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #5c677d; /* 深色按钮，呼应南洋/法式风格 */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#scene-nav button:hover {
+    background-color: #3b4252;
+}
