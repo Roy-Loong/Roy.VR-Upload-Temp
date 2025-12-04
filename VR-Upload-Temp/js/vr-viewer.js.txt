@@ -2,7 +2,7 @@
 function changeScene(sceneId) {
     const imageElement = document.getElementById('pano-image');
     // 注意：这里的路径必须与您的文件结构相匹配: assets/pano/图片名.jpg
-    const imagePath = `assets/pano/${sceneId}.jpg`; 
+    const imagePath = `/Roy-loft-vr-showcase/assets/pano/${sceneId}.jpg`; 
 
     // 1. 实现淡出效果
     imageElement.style.opacity = 0;
@@ -22,4 +22,5 @@ function changeScene(sceneId) {
 // 初始化时提示
 document.addEventListener('DOMContentLoaded', () => {
     console.log("VR Viewer 已加载。请点击场景切换按钮预览。");
+
 });
